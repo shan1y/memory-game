@@ -3,7 +3,10 @@
     <Card
       v-for="(card, index) in cardList"
       :key="`card-${index}`"
-      :value="card"
+      :value="card.value"
+      :visible="card.visible"
+      @select-card="flipCard"
+      :position="card.position"
     />
   </section>
 </template>
@@ -11,6 +14,7 @@
 <script>
 import Home from "./components/Home.vue";
 import Card from "./components/Card.vue";
+import { ref } from "vue";
 
 export default {
   name: "App",
@@ -18,11 +22,17 @@ export default {
     Card,
   },
   setup() {
-    const cardList = [];
+    const cardList = ref([]);
     for (let i = 0; i < 16; i++) {
-      cardList.push(i);
+      cardList.value.push({ value: i, visible: false, position: i });
     }
-    return { cardList };
+    const flipCard = (payload) => {
+      cardList.value[payload.position].visible = true;
+    };
+    return {
+      cardList,
+      flipCard,
+    };
   },
 };
 </script>
@@ -30,10 +40,6 @@ export default {
 <style>
 #app {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.card {
-  border: 5px solid #ccc;
 }
 
 .game-board {
