@@ -1,8 +1,5 @@
 <template>
-  <div class="">
-    <img :src="vueImg" class="" alt="logo" />
-    <h1 class="title">{{ msg }}</h1>
-  </div>
+  <h1>Peek a vue</h1>
 </template>
 
 <script>
