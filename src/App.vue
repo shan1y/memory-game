@@ -1,36 +1,33 @@
 <template>
   <section class="game-board">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <Card
+      v-for="(card, index) in cardList"
+      :key="`card-${index}`"
+      :value="card"
+    />
   </section>
 </template>
 
 <script>
 import Home from "./components/Home.vue";
+import Card from "./components/Card.vue";
 
 export default {
   name: "App",
   components: {
-    Home,
+    Card,
+  },
+  setup() {
+    const cardList = [];
+    for (let i = 0; i < 16; i++) {
+      cardList.push(i);
+    }
+    return { cardList };
   },
 };
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: Arial, Helvetica, sans-serif;
 }
