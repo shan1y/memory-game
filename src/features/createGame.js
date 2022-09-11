@@ -1,47 +1,48 @@
-import _ from 'lodash'
-import { computed, ref } from 'vue'
+import _ from "lodash";
+import { computed, ref } from "vue";
 
 export default function createGame(deck) {
-  const newPlayer = ref(true)
+  const newPlayer = ref(true);
 
   const startGame = () => {
-    newPlayer.value = false
+    newPlayer.value = false;
 
-    restartGame()
-  }
+    restartGame();
+  };
 
   const restartGame = () => {
-    deck.value = _.shuffle(deck.value)
+    deck.value = _.shuffle(deck.value);
 
     deck.value = deck.value.map((card, index) => {
       return {
         ...card,
         matched: false,
         position: index,
-        visible: false
-      }
-    })
-  }
+        visible: false,
+      };
+    });
+  };
 
   const status = computed(() => {
     if (matchesFound.value === 8) {
-      return 'Player wins!'
+      return "Player wins!";
     } else {
-      return `Matches found: ${matchesFound.value}`
+      return `Matches Found: ${matchesFound.value}`;
     }
-  })
+  });
 
   const matchesFound = computed(() => {
-    const matchedCards = deck.value.filter(card => card.matched === true).length
-
-    return matchedCards / 2
-  })
+    const matchedCards = deck.value.filter(
+      (card) => card.matched === true
+    ).length;
+    return matchedCards / 2;
+  });
 
   return {
     matchesFound,
     newPlayer,
     restartGame,
     startGame,
-    status
-  }
+    status,
+  };
 }

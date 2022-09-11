@@ -26,9 +26,9 @@ export default {
         src="/images/play.svg"
         alt="Play Icon"
       /><img
-        :class="$style['icon-ghost']"
-        src="/images/cute-ghost.svg"
-        alt="Cute Ghost"
+        :class="$style['icon-smiley']"
+        src="/images/icon-smiley.svg"
+        alt="starrey-eye emoji"
       />
     </div>
     Start Game
@@ -40,8 +40,8 @@ export default {
 
 <style module>
 .button {
-  background-color: #e78805;
-  color: white;
+  background-color: var(--cta-color);
+  color: var(--light-text);
   padding: 8px 16px 10px;
   display: flex;
   align-items: center;
@@ -55,14 +55,16 @@ export default {
   border-radius: 10px;
   transition: 0.2s all ease-in;
   border: 2px solid #e78805;
+  cursor: pointer;
 }
 
 .button:hover {
   border: 2px solid #e78805;
-  background-color: transparent;
+  background-color: var(--cta-color);
+  transform: scale(1.1);
 }
 
-.button:hover .icon-ghost {
+.button:hover .icon-smiley {
   opacity: 1;
 }
 
@@ -75,10 +77,12 @@ export default {
   transition: 0.2s opacity ease-in;
 }
 
-.button .icon-ghost {
+.button .icon-smiley {
   position: absolute;
+  height: 1.4rem;
   left: -6px;
   opacity: 0;
+  filter: invert(1);
 }
 
 .button .icon-play {

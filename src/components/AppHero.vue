@@ -1,42 +1,5 @@
 <template>
   <h1 class="sr-only">Deja Vue</h1>
-  <section :class="$style.description">
-    <p :class="$style['powered-wrapper']">
-      Powered by
-      <a :class="$style['powered-link']" href="https://v3.vuejs.org/">
-        <img
-          :class="$style['powered-logo']"
-          src="/images/vue-logo.svg"
-          alt="Vue.js logo"
-        />
-        Vue.js 3
-      </a>
-      <span>, </span>
-      <a
-        :class="$style['powered-link']"
-        href="https://www.netlify.com/?utm_source=github&utm_medium=peekavue-bh&utm_campaign=devex"
-      >
-        <img
-          :class="$style['powered-logo']"
-          src="/images/netliheart.svg"
-          alt="Netlify Heart Logo"
-        />
-        Netlify
-      </a>
-      <span> & </span>
-      <a
-        :class="$style['powered-link']"
-        href="https://www.github.com/shan1y/memory-game"
-      >
-        <img
-          :class="$style['powered-logo']"
-          src="/images/github-logo.svg"
-          alt="GitHub Logo"
-        />
-        GitHub</a
-      >
-    </p>
-  </section>
 </template>
 
 <style module>

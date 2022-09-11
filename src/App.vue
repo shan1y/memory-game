@@ -139,13 +139,26 @@ a:hover {
   text-align: center;
   background-color: white;
   /* color: var(--unflipped-bg); */
-  padding: 60px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .status {
   font-family: "Titillium Web", sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
+  font-size: 1.125rem;
+  width: 12em;
+  height: 3rem;
+  border-radius: 10px;
+  margin-inline: auto;
+  display: flex;
+  margin-top: 2rem;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--matched-text);
+  background-color: var(--flipped-bg);
 }
 
 .game-board {
@@ -172,12 +185,8 @@ a:hover {
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }

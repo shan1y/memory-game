@@ -96,6 +96,7 @@ export default {
   background-color: var(--flipped-bg);
   color: white;
   transform: rotateY(180deg);
+  transition: 1s;
 }
 
 .card-face.is-back {
@@ -112,5 +113,6 @@ export default {
   position: absolute;
   right: 5px;
   bottom: 5px;
+  display: none;
 }
 </style>
