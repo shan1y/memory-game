@@ -133,6 +133,7 @@ a:hover {
 }
 
 #app {
+  padding: 2rem 0;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -165,22 +166,22 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(4, 60px);
   grid-template-rows: repeat(4, 60px);
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
   justify-content: center;
 }
 
 @media screen and (min-width: 500px) {
   .game-board {
-    grid-template-columns: repeat(4, 90px);
-    grid-template-rows: repeat(4, 90px);
+    grid-template-columns: repeat(4, 5.625rem);
+    grid-template-rows: repeat(4, 5.625rem);
   }
 }
 
 @media screen and (min-width: 600px) {
   .game-board {
-    grid-template-columns: repeat(4, 120px);
-    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(4, 7.5rem);
+    grid-template-rows: repeat(4, 7.5rem);
   }
 }
 
