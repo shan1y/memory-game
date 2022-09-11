@@ -180,8 +180,8 @@ a:hover {
 
 @media screen and (min-width: 600px) {
   .game-board {
-    grid-template-columns: repeat(4, 7.5rem);
-    grid-template-rows: repeat(4, 7.5rem);
+    grid-template-columns: repeat(4, 6.5rem);
+    grid-template-rows: repeat(4, 6.5rem);
   }
 }
 
