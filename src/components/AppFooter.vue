@@ -7,9 +7,9 @@
 
 <style scoped>
 footer {
-  color: var(--matched-text);
+  color: var(--active-card);
 }
 .footer-desc {
-  color: var(--matched-text);
+  color: var(--active-card);
 }
 </style>

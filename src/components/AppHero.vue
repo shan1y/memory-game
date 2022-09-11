@@ -1,5 +1,18 @@
 <template>
   <h1 class="sr-only">Deja Vue</h1>
+  <section :class="$style.description">
+    <p :class="$style['powered-wrapper']">
+      Powered by
+      <a :class="$style['powered-link']" href="https://v3.vuejs.org/">
+        <img
+          :class="$style['powered-logo']"
+          src="/images/vue-logo.svg"
+          alt="Vue.js logo"
+        />
+        Vue.js 3
+      </a>
+    </p>
+  </section>
 </template>
 
 <style module>
@@ -13,8 +26,7 @@
 }
 
 .description p:last-child {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 0.9rem;
 }
 
@@ -23,10 +35,12 @@
   align-items: center;
   justify-content: center;
   margin-top: 15px;
+  color: var(--active-card);
 }
 
 .powered-link {
   padding: 0 5px;
+  color: var(--active-card);
 }
 
 .powered-link:first-child,

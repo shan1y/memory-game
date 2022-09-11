@@ -56,6 +56,7 @@ export default {
   transition: 0.2s all ease-in;
   border: 2px solid #e78805;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 .button:hover {

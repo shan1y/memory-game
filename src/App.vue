@@ -158,6 +158,7 @@ a:hover {
   align-items: center;
   color: var(--matched-text);
   background-color: var(--flipped-bg);
+  border: 2px solid var(--border-matched);
 }
 
 .game-board {
@@ -185,7 +186,7 @@ a:hover {
 
 .sr-only {
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
