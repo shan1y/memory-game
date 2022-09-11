@@ -138,7 +138,6 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: white;
-  /* color: var(--unflipped-bg); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
