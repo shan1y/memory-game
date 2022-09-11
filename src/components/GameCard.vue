@@ -24,6 +24,8 @@ export default {
     const flippedStyles = computed(() => {
       if (props.visible) {
         return "is-flipped";
+      } else {
+        return "";
       }
     });
 
@@ -44,11 +46,16 @@ export default {
 
 <template>
   <div class="card" :class="flippedStyles" @click="selectCard">
-    <div class="card-face is-front">
+    <div
+      v-bind:class="{
+        'card-face is-front': !matched,
+        'card-face is-front-active': matched,
+      }"
+    >
       <img
         class="card-image"
-        :srcset="`/images/${value}@2x.png 2x, /images/${value}.png 1x`"
-        :src="`/images/${value}.png`"
+        :srcset="`/images/${value}.svg`"
+        :src="`/images/${value}.svg`"
         :alt="value"
       />
       <img v-if="matched" src="/images/checkmark.svg" class="icon-checkmark" />
@@ -72,7 +79,7 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,18 +87,25 @@ export default {
 }
 
 .card-face.is-front {
-  background-image: url("/images/card-bg.png");
+  background-color: var(--cta-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-face.is-front-active {
+  background-color: var(--flipped-bg);
   color: white;
   transform: rotateY(180deg);
 }
 
 .card-face.is-back {
-  background-image: url("/images/card-bg-empty.png");
+  background-color: var(--unflipped-bg);
   color: white;
 }
 
 .card-image {
-  max-width: 100%;
+  max-width: 50%;
+  filter: invert(1);
 }
 
 .icon-checkmark {

@@ -1,13 +1,6 @@
 <template>
-  <h1 class="sr-only">Peek-a-Vue</h1>
-  <img
-    srcset="/images/peek-a-vue-title@2x.png 2x, /images/peek-a-vue-title.png 1x"
-    src="/images/peek-a-vue-title.png"
-    alt="Peek-a-Vue"
-    class="title"
-  />
+  <h1 class="sr-only">Deja Vue</h1>
   <section :class="$style.description">
-    <p>Welcome to Peek-a-Vue, a Halloween themed card matching game!</p>
     <p :class="$style['powered-wrapper']">
       Powered by
       <a :class="$style['powered-link']" href="https://v3.vuejs.org/">
@@ -33,7 +26,7 @@
       <span> & </span>
       <a
         :class="$style['powered-link']"
-        href="https://www.github.com/bencodezen/peek-a-vue"
+        href="https://www.github.com/shan1y/memory-game"
       >
         <img
           :class="$style['powered-logo']"

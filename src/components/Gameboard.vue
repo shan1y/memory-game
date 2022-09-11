@@ -1,10 +1,10 @@
 <script>
-import Card from "./Card";
+import GameCard from "./GameCard";
 
 export default {
   emits: ["flipcard"],
   components: {
-    Card,
+    GameCard,
   },
   props: {
     cardList: {
@@ -30,7 +30,7 @@ export default {
 
 <template>
   <transition-group tag="section" class="game-board" name="shuffle-card">
-    <Card
+    <GameCard
       v-for="card in cardList"
       :key="`${card.value}-${card.variant}`"
       :matched="card.matched"

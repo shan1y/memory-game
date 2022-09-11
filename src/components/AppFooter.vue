@@ -1,3 +1,5 @@
 <template>
-  <footer>Made by <a href="https://www.bencodezen.io">BenCodeZen</a></footer>
+  <footer>
+    Made by <a href="https://shannonshaida.com">Shannon Yazdani</a>
+  </footer>
 </template>

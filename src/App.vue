@@ -7,7 +7,7 @@ import AppFooter from "./components/AppFooter";
 import AppHero from "./components/AppHero";
 import GameBoard from "./components/GameBoard";
 import NewGameButton from "./components/NewGameButton";
-import halloweenDeck from "./data/halloweenDeck.json";
+import iconDeck from "./data/icon-deck.json";
 
 export default {
   name: "App",
@@ -18,7 +18,7 @@ export default {
     NewGameButton,
   },
   setup() {
-    const { cardList } = createDeck(halloweenDeck);
+    const { cardList } = createDeck(iconDeck);
     const { newPlayer, startGame, restartGame, matchesFound, status } =
       createGame(cardList);
     const userSelection = ref([]);
@@ -78,7 +78,7 @@ export default {
               cardList.value[cardTwo.position].visible = false;
               // Allow user to flip a new card
               userCanFlipCard.value = true;
-            }, 2000);
+            }, 1000);
           }
 
           userSelection.value.length = 0;
@@ -107,6 +107,7 @@ export default {
 </template>
 
 <style>
+@import "./styles/variables.css";
 html,
 body {
   margin: 0;
@@ -115,7 +116,6 @@ body {
 }
 
 html {
-  background-image: url("/images/page-bg.png");
   background-color: #00070c;
 }
 
@@ -137,8 +137,8 @@ a:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  color: #fff;
+  background-color: white;
+  /* color: var(--unflipped-bg); */
   padding: 60px 0;
 }
 
