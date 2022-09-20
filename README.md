@@ -1,13 +1,13 @@
-# memory-game
+# :star: Deja Vue
 
- <h1>Deja Vue</h1>
+This is a memory game built in vue, using React Icons for the images of the tech stacks used for this project.
 
 ### :camera: Screenshots
 <div align="center">
 <img src="./public/images/dejavue.png"  width="30%">
 </div>
 
-## :star: Project setup
+## :hammer: Project setup
 ```
 npm install
 ```
