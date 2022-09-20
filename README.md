@@ -1,6 +1,13 @@
 # memory-game
 
-## Project setup
+ <h1>Deja Vue</h1>
+
+### :camera: Screenshots
+<div align="center">
+<img src="/src/assets/images/homepage.png"  width="30%">
+</div>
+
+## :tool: Project setup
 ```
 npm install
 ```
@@ -14,11 +21,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
