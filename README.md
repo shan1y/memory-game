@@ -4,10 +4,10 @@
 
 ### :camera: Screenshots
 <div align="center">
-<img src="/src/assets/images/homepage.png"  width="30%">
+<img src="./public/images/dejavue.png"  width="30%">
 </div>
 
-## :tool: Project setup
+## :star: Project setup
 ```
 npm install
 ```
