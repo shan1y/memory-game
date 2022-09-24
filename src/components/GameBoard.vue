@@ -6,6 +6,7 @@ export default {
   components: {
     GameCard,
   },
+
   props: {
     cardList: {
       type: Array,
@@ -13,6 +14,10 @@ export default {
     },
     status: {
       type: String,
+      required: true,
+    },
+    moves: {
+      type: Number,
       required: true,
     },
   },
@@ -25,6 +30,7 @@ export default {
       selectCard,
     };
   },
+  methods: {},
 };
 </script>
 
@@ -40,7 +46,10 @@ export default {
       @select-card="selectCard"
     />
   </transition-group>
-  <h2 class="status">{{ status }}</h2>
+  <div class="status">
+    <h3>Moves: {{ moves }}</h3>
+    <h3>{{ status }}</h3>
+  </div>
 </template>
 
 <style></style>

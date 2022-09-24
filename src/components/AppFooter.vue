@@ -7,6 +7,7 @@
 
 <style scoped>
 footer {
+  margin-top: 1rem;
   color: var(--active-card);
 }
 .footer-desc {

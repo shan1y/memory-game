@@ -21,14 +21,17 @@ export default {
     const { cardList } = createDeck(iconDeck);
     const { newPlayer, startGame, restartGame, matchesFound, status } =
       createGame(cardList);
+    let moves = ref(0);
     const userSelection = ref([]);
     const userCanFlipCard = ref(true);
 
     const startNewGame = () => {
       if (newPlayer) {
         startGame();
+        moves.value = 0;
       } else {
         restartGame();
+        moves.value = 0;
       }
     };
 
@@ -44,6 +47,8 @@ export default {
             return;
           } else {
             userSelection.value[1] = payload;
+
+            moves.value = moves.value + 1;
           }
         } else {
           userSelection.value[0] = payload;
@@ -94,6 +99,7 @@ export default {
       status,
       startNewGame,
       newPlayer,
+      moves,
     };
   },
 };
@@ -102,7 +108,12 @@ export default {
 <template>
   <AppHero />
   <NewGameButton :newPlayer="newPlayer" @start-new-game="startNewGame" />
-  <GameBoard :cardList="cardList" :status="status" @flipcard="flipCard" />
+  <GameBoard
+    :moves="moves"
+    :cardList="cardList"
+    :status="status"
+    @flipcard="flipCard"
+  />
   <AppFooter />
 </template>
 
@@ -121,6 +132,10 @@ html {
 
 h1 {
   margin-top: 0;
+}
+
+h3 {
+  margin-top: 0.5rem;
 }
 
 a {
@@ -147,8 +162,10 @@ a:hover {
 .status {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.125rem;
-  width: 12em;
-  height: 3rem;
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  /* height: 3rem; */
   border-radius: 10px;
   margin-inline: auto;
   display: flex;
