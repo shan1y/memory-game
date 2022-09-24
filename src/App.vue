@@ -123,8 +123,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
 }
@@ -156,7 +156,6 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: white;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
