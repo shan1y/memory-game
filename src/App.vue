@@ -155,6 +155,7 @@ a:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  height: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
