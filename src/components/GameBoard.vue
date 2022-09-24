@@ -47,8 +47,8 @@ export default {
     />
   </transition-group>
   <div class="status">
-    <h3>Moves: {{ moves }}</h3>
-    <h3>{{ status }}</h3>
+    <h4>Moves: {{ moves }}</h4>
+    <h4>{{ status }}</h4>
   </div>
 </template>
 

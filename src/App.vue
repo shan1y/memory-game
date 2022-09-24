@@ -124,6 +124,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 html {
@@ -134,8 +137,8 @@ h1 {
   margin-top: 0;
 }
 
-h3 {
-  margin-top: 0.5rem;
+h4 {
+  margin: 0.2rem;
 }
 
 a {
@@ -163,9 +166,9 @@ a:hover {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.125rem;
   width: 12rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  /* height: 3rem; */
   border-radius: 10px;
   margin-inline: auto;
   display: flex;
